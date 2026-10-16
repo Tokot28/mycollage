@@ -19,10 +19,37 @@
       border-radius: 12px;
       box-shadow: 0 0 30px rgba(255,255,255,.2);
     }
+    .back-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 16px;
+      background: rgba(255, 204, 0, .15);
+      color: #ffcc00;
+      border: 1px solid #ffcc00;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      backdrop-filter: blur(6px);
+      transition: background .2s, transform .2s;
+    }
+    .back-btn:hover {
+      background: rgba(255, 204, 0, .3);
+      transform: translateY(-1px);
+    }
+    .back-btn:active {
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
   <p> С праздником тебя мое солнце! </p>
   <img src="images/big.jpg" alt="Большое фото">
+  <a href="index.html" class="back-btn">← Назад</a>
 </body>
 </html>
