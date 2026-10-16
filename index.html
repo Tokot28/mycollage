@@ -1,3 +1,5 @@
+
+ 
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -30,83 +32,54 @@
       border-radius: 10px;
       display: block;
       transition: transform .2s;
-    }
-     .zoom-checkbox {
-      display: none;
-    }
-
-    /* Обёртка над фото — кликабельна, как кнопка */
-    .photo-wrapper {
-      display: block;
-      line-height: 0;
-      cursor: zoom-in;
-    }
-
-    /* Изначально — уменьшенная версия, вписанная в экран */
-    .photo-wrapper img {
-      max-width: 90vw;
-      max-height: 80vh;
-      border-radius: 12px;
-      transition: max-width .3s, max-height .3s, border-radius .3s;
-    }
-
-    /* Чекбокс включён → фото в оригинальном размере (1:1) */
-    .zoom-checkbox:checked + .photo-wrapper img {
-      max-width: none;
-      max-height: none;
-      width: auto;
-      height: auto;
-      border-radius: 0;
-    }
-
-    .zoom-checkbox:checked + .photo-wrapper {
-      cursor: zoom-out;
-    }      
-    /* Подсветка кликабельного фото */
+     } 
+       img {
+    max-width: 95%;
+    transition: transform .3s;
+    cursor: pointer;
+  }
+  img:active {
+    transform: scale(1.5);
+  }
+    
+    /* Кликабельное фото с жёлтой рамкой */
     .collage a img {
-      border: 1px solid #ffcc00;
+      border: 2px solid #ffcc00;
       cursor: pointer;
     }
     .collage a img:hover {
-      transform: scale(1.03);
-      <img src="Images/photo10.jpg" alt="Фото 10">
-      img-align: center
+      transform: scale(1.05);
     }
     .hint {
       color: #ffcc00;
       text-align: center;
       font-size: 14px;
       margin-top: 15px;
-      
-  
-    </style>
+    }
+  </style>
 </head>
 <body>
 
-   
-  
   <h1>Наш коллаж</h1>
+
   <div class="collage">
-  
-    <input type="checkbox" id="zoom" class="zoom-checkbox">
     
     <img src="Images/photo2.jpg" alt="Фото 2">
     <img src="Images/photo3.jpg" alt="Фото 3">
-    <img src="Images/photo1.jpg" alt="Фото 1">
     <img src="Images/photo4.jpg" alt="Фото 4">
-    <img src="Images/photo5.jpg" alt="Фото 5">
     <img src="Images/photo6.jpg" alt="Фото 6">
+    <img src="Images/photo5.jpg" alt="Фото 5">
     <img src="Images/photo7.jpg" alt="Фото 7">
-    <img src="Images/photo8.jpg" alt="Фото 8">
     <img src="Images/photo9.jpg" alt="Фото 9">
+    <img src="Images/photo8.jpg" alt="Фото 8">
+    
 
     <!-- Это фото — гиперссылка на вторую страницу -->
     <a href="page2.html">
       <img src="Images/photo10.jpg" alt="Нажми на меня">
     </a>
-    
   </div>
 
- 
+  
 </body>
 </html>
