@@ -18,19 +18,27 @@
     }
     .collage {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       max-width: 600px;
       margin: 0 auto;
     }
     .collage img {
-      width: 100%;
+      width: 80%;
       height: 200px;
       object-fit: cover;
       border-radius: 10px;
       display: block;
       transition: transform .2s;
     }
+    }
+     img:active {
+      max-width: none;
+      max-height: none;
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      cursor: zoom-out;
     }
     /* Подсветка кликабельного фото */
     .collage a img {
@@ -47,15 +55,7 @@
       font-size: 14px;
       margin-top: 15px;
       
-    img {
-    max-width: 95%;
-    transition: transform .3s;
-    cursor: pointer;
-  }
-  img:active {
-    transform: scale(2);
-  }
-
+  
     </style>
 </head>
 <body>
