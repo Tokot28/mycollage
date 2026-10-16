@@ -31,15 +31,22 @@
       display: block;
       transition: transform .2s;
     }
-     img {
-    max-width: 95%;
-    transition: transform .3s;
-    cursor: pointer;
-  }
-  img:active {
-    transform: scale(1.5);
-  }
-  
+    img {
+      max-width: 95%;
+      border-radius: 12px;
+      cursor: zoom-in;
+      transition: max-width .3s, max-height .3s, border-radius .3s;
+    }
+
+    /* Пока удерживаешь — фото в оригинальном размере */
+    img:active {
+      max-width: none;
+      max-height: none;
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      cursor: zoom-out;
+    }
       
     /* Подсветка кликабельного фото */
     .collage a img {
