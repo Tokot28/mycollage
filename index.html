@@ -33,13 +33,15 @@
     }
     }
     
-     .img:active {
-      max-width: none;
-      max-height: none;
-      width: auto;
-      height: auto;
-      border-radius: 0;
-      cursor: zoom-out;
+     
+    .img {
+    max-width: 95%;
+    transition: transform .3s;
+    cursor: pointer;
+  }
+  .img:active {
+    transform: scale(1.5);
+  }
   }
       
     /* Подсветка кликабельного фото */
